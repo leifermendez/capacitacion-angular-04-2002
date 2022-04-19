@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { UserInterface } from '../core/interfaces/user.interface';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-user-page',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserPageComponent implements OnInit {
 
-  constructor() { }
+  users:UserInterface[] = []
+
+  constructor(private userService:UserService) { }
 
   ngOnInit(): void {
+  }
+
+  cargarUsuarios():void{
+    this.userService.httpUser()
+    .subscribe((response) => this.users = response )
   }
 
 }

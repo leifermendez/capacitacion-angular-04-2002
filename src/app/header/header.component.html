@@ -1,7 +1,16 @@
 <div class="menu">
-    <ul>
-        <li [routerLink]="link.path" *ngFor="let link of menu">
-            {{link.label}}
-        </li>
-    </ul>
+    <div class="block-left">
+        <ul>
+            <li [routerLink]="link.path" *ngFor="let link of menu">
+                <i [class]="link.icon"></i> {{link.label}}
+            </li>
+        </ul>
+    </div>
+    <div class="block-right">
+        <div class="nickname">Hola soy {{username}}</div>
+        <div class="avatar">
+            <img src="https://avatars.githubusercontent.com/u/15802366?v=4" alt="">
+        </div>
+    </div>
+
 </div>

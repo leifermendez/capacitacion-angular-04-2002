@@ -1,3 +1,15 @@
 <app-header></app-header>
-Mi Home Page
-<app-footer></app-footer>
+<div>
+    <h3>Hola soy {{username}}</h3>
+
+    <button (click)="login()" class="sign-in">
+        Iniciar sesion (Simular)
+    </button>
+</div>
+<div *ngIf="isValid else plantillaVacia">
+    Este mensaje sale por que el valor {{isValid}} 🙌
+</div>
+
+<ng-template #plantillaVacia>
+    Esto sale cuadno no existen resultado 😉
+</ng-template>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,19 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent  {
+  @Input() username!:string;
 
   menu = [
     {
       label:'Home',
-      path:['/']
+      path:['/'],
+      icon:'uil uil-home'
     },
     {
       label:'User',
-      path:['/','user']
+      path:['/','user'],
+      icon:'uil uil-user'
     },
     {
       label:'Contact',
-      path:['/','contact']
+      path:['/','contact'],
+      icon:'uil uil-envelope'
     }
   ]
 

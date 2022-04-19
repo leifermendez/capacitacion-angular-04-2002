@@ -1,2 +1,7 @@
 <app-header></app-header>
-<p>user-page works!</p>
+<ul>
+    <li *ngFor="let user of users">
+       {{user.title}} 
+    </li>
+</ul>
+<button (click)="cargarUsuarios()">Cargar Usuarios</button>

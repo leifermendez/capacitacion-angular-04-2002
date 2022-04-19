@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { UserService } from './../user.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contact-page',
   templateUrl: './contact-page.component.html',
   styleUrls: ['./contact-page.component.css']
 })
-export class ContactPageComponent implements OnInit {
+export class ContactPageComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  constructor(private userService:UserService) { }
 
-  ngOnInit(): void {
+  ngOnDestroy(): void {
+
   }
 
+  ngOnInit(): void {
+    this.cargarUser();
+  }
+  
+
+  cargarUser():void{
+    this.userService.httpUser()
+    .subscribe((response => console.log(response)))
+  }
 }
