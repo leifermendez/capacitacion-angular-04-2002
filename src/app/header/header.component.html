@@ -1,3 +1,7 @@
 <div class="menu">
-    Nuestro menu de app
+    <ul>
+        <li [routerLink]="link.path" *ngFor="let link of menu">
+            {{link.label}}
+        </li>
+    </ul>
 </div>

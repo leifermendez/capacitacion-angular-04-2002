@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { UserPageComponent } from './user-page/user-page.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
 
 @NgModule({
   imports: [
@@ -18,7 +20,9 @@ import { HomePageComponent } from './home-page/home-page.component';
     HeaderComponent,
      AppComponent,
       FooterComponent,
-      HomePageComponent],
+      HomePageComponent,
+      UserPageComponent,
+      ContactPageComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
