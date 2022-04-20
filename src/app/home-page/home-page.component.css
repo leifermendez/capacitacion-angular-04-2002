@@ -3,3 +3,12 @@
     height: 150px;
     object-fit: cover;
 }
+
+.alert{
+    background-color: aqua;
+    padding: .5rem;
+}
+
+.alert-danger{
+    background-color: brown;
+}
