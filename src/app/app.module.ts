@@ -12,6 +12,7 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ImgNotFoundDirective } from './img-not-found.directive';
+import { ExamplePipe } from './example.pipe';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { ImgNotFoundDirective } from './img-not-found.directive';
     ContactPageComponent,
     LoginPageComponent,
     ImgNotFoundDirective,
+    ExamplePipe,
   ],
   providers: [],
   bootstrap: [AppComponent],

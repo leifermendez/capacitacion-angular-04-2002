@@ -9,6 +9,11 @@ export class HomePageComponent {
   username: string | null = null;
   isValid = false;
 
+  usuarioActual = {
+    name:'Leifer',
+    email:'test@test.com'
+  }
+
   login(): void {
     this.username = 'Jesus';
     this.isValid = true
