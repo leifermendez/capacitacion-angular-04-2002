@@ -23,6 +23,11 @@ export class HeaderComponent  {
       label:'Contact',
       path:['/','contact'],
       icon:'uil uil-envelope'
+    },
+    {
+      label:'Login',
+      path:['/','login'],
+      icon:'uil uil-user'
     }
   ]
 

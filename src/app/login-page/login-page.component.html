@@ -1,0 +1,65 @@
+<!-- <form (ngSubmit)="enviarCredenciales()" [formGroup]="miFormularioLogin">
+    <div class="form-control">
+        <label for="email">Email</label>
+        <input formControlName="email" type="text">
+    </div>
+    <div *ngIf="getStatusValidEmail()" class="form-control animate__animated animate__fadeInDown">
+        <label for="password">Password</label>
+        <input formControlName="password" type="password">
+    </div>
+    <div>
+        <button [disabled]="miFormularioLogin.invalid">Iniciar sesion</button>
+        <button  (click)="simularHttp()">Simular Http</button>
+    </div>
+</form>
+<div *ngIf="getStatusValidEmailError()">
+    {{getStatusValidEmailError() | json}}
+</div>
+<div>
+    {{miFormularioLogin.value.email}} <br>
+    {{miFormularioLogin.value.password}}
+</div> -->
+
+<div class="main-wrapper">
+    <div class="wrapper">
+        <button [disabled]="formParent.value.skills.length >= 5" (click)="addSkill()">Agregar Skill</button>
+
+        <form [formGroup]="formParent" class="form-parent">
+
+            <div class="form-field">
+                <input type="text" placeholder="Ingresa tu nombre" formControlName="name">
+            </div>
+
+            <div class="form-grid" formArrayName="skills">
+
+                <div class="form-field" *ngFor="let skill of getCtrl('skills',formParent).controls;index as formChild">
+
+                    <div class="form-block" [formGroupName]="formChild">
+                        <div class="form-field">
+                            <input type="text" placeholder="Lenguaje" formControlName="language">
+                        </div>
+                        <div class="form-field">
+                            <input type="text" placeholder="projectUrl" formControlName="projectUrl">
+                        </div>
+                        <div class="form-field">
+                            <input type="text" placeholder="expYear" formControlName="expYear">
+                        </div>
+                        <button (click)="removeValidation(formChild,'language')">Remove</button>
+                        <button (click)="addValidation(formChild,'language')">Add</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+    <div class="wrapper">
+        <div><b>Es valido el fomulario?: </b>
+            <span *ngIf="formParent.valid">✔</span>
+            <span *ngIf="!formParent.valid">🔴</span>
+        </div>
+        <pre>{{formParent.value | json}}</pre>
+    </div>
+</div>
