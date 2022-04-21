@@ -13,6 +13,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ImgNotFoundDirective } from './img-not-found.directive';
 import { ExamplePipe } from './example.pipe';
+import { TableUserComponent } from './table-user/table-user.component';
+import { DetailUserComponent } from './detail-user/detail-user.component';
 
 @NgModule({
   imports: [
@@ -32,6 +34,8 @@ import { ExamplePipe } from './example.pipe';
     LoginPageComponent,
     ImgNotFoundDirective,
     ExamplePipe,
+    TableUserComponent,
+    DetailUserComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

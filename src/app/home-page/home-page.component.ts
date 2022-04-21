@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-home-page',
@@ -6,6 +7,13 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.css'],
 })
 export class HomePageComponent {
+
+  constructor(private sharedService:SharedService){
+
+  }
+
+  userActualEnHomePage = this.sharedService.userSelected;
+
   username: string | null = null;
   isValid = false;
 

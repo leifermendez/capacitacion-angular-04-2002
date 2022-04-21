@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header username="Jesus"></app-header>
 <div>
     <h3>Hola soy {{username}}</h3>
 
@@ -7,11 +7,18 @@
     </button>
 </div>
 
+<h2>{{userActualEnHomePage | json}}</h2>
+
+<app-table-user></app-table-user>
+
+<app-detail-user></app-detail-user>
+
+
 <!-- <div *ngFor="let esto of [1,1,1]">
     <img appImgNotFound class="imagen" src="httppppp://images.unsplash.com/photo-1650239555612-192617d359a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
 </div> -->
 
-<div>
+<!-- <div>
   {{1500 | example:'USD'}}
 </div>
 
@@ -26,4 +33,4 @@
 
 <ng-template #plantillaVacia>
     Esto sale cuadno no existen resultado 😉
-</ng-template>
+</ng-template> -->
