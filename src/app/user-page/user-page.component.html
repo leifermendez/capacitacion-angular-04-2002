@@ -1,7 +1,9 @@
 <app-header></app-header>
+<app-detail-user [listaUsuarios]="variable" ></app-detail-user>
+<input type="text" [(ngModel)]="datoABuscar" placeholder="Buscar" name="" id="">
 <ul>
-    <li *ngFor="let user of users">
-       {{user.title}} 
+    <li *ngFor="let user of users | searchList:datoABuscar">
+       {{user.title}} <b>{{user.completed}}</b>
     </li>
 </ul>
 <button (click)="cargarUsuarios()">Cargar Usuarios</button>

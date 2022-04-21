@@ -1,3 +1,10 @@
-<div class="detail-user">
-    Detalle user {{userActualEnDetail | json}}
+<div>
+    <form (ngSubmit)="addUser()" [formGroup]="userForm">
+        <div>
+            <input formControlName="title" type="text">
+        </div>
+        <div>
+            <button>Agregar usuario</button>
+        </div>
+    </form>
 </div>

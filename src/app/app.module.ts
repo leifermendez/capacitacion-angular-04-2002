@@ -10,11 +10,12 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ImgNotFoundDirective } from './img-not-found.directive';
 import { ExamplePipe } from './example.pipe';
 import { TableUserComponent } from './table-user/table-user.component';
 import { DetailUserComponent } from './detail-user/detail-user.component';
+import { SearchListPipe } from './search-list.pipe';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { DetailUserComponent } from './detail-user/detail-user.component';
     AppRoutingModule, 
     RouterModule, 
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: [
     HeaderComponent,
@@ -36,6 +38,7 @@ import { DetailUserComponent } from './detail-user/detail-user.component';
     ExamplePipe,
     TableUserComponent,
     DetailUserComponent,
+    SearchListPipe,
   ],
   providers: [],
   bootstrap: [AppComponent],

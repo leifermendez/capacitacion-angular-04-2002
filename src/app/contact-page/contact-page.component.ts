@@ -20,7 +20,6 @@ export class ContactPageComponent implements OnInit, OnDestroy {
   
 
   cargarUser():void{
-    this.userService.httpUser()
-    .subscribe((response => console.log(response)))
+
   }
 }

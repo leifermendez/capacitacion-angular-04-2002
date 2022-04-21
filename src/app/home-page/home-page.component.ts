@@ -1,3 +1,4 @@
+import { UserInterface } from './../core/interfaces/user.interface';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { SharedService } from '../shared.service';
 
@@ -6,13 +7,25 @@ import { SharedService } from '../shared.service';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css'],
 })
-export class HomePageComponent {
+export class HomePageComponent implements OnInit {
 
   constructor(private sharedService:SharedService){
 
   }
 
-  userActualEnHomePage = this.sharedService.userSelected;
+  userActualEnHomePage = this.sharedService.userSelected$
+
+  ngOnInit(): void {
+      // this.sharedService.userSelected$.subscribe((user) => {
+      //   this.userActualEnHomePage = user
+      // })
+  }
+
+  buttonCambiarUsuario():void{
+    this.sharedService.cambiarUsuario('Roberto 🤔')
+  }
+
+  //TODO Retorna un Observable y debemos suscribirnos
 
   username: string | null = null;
   isValid = false;

@@ -5,9 +5,10 @@
     <button (click)="login()" class="sign-in">
         Iniciar sesion (Simular)
     </button>
+    <button (click)="buttonCambiarUsuario()">Cambiar dato del servicio</button>
 </div>
 
-<h2>{{userActualEnHomePage | json}}</h2>
+<h2>{{(userActualEnHomePage | async)?.title}}</h2>
 
 <app-table-user></app-table-user>
 
