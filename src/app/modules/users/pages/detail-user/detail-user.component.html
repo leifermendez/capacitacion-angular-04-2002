@@ -1,0 +1,7 @@
+<div *ngIf="loading$ | async">Cargando...</div>
+<div>
+    Detalles del usario/course
+    <div>
+        {{usersState$ | async | json}}
+    </div>
+</div>

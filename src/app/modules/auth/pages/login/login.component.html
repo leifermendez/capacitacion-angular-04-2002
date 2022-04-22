@@ -1,0 +1,10 @@
+<div *ngIf="loading$ | async">Cargando....‼️‼️‼️</div>
+<div>
+    <div>
+        Aqui va el formulario reactivo
+    </div>
+    <div>
+        User: {{user | json}}
+    </div>
+    <button (click)="sendCredentials()">Simular Login</button>
+</div>
